@@ -1,0 +1,66 @@
+fileVersion: 1
+id: 6c5b5656-91c9-4c15-9c5e-4f36b21bc9f1
+name: 40STG_DAILY_14_TOTAL_SHORT9
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 19bee332-f3b5-4286-9ff7-ef54aebcd771
+          stepCounter: 6c5b5656-91c9-4c15-9c5e-4f36b21bc9f1
+        config: {}
+        dataType: VARIANT
+        description: ""
+        name: V
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 39fe5095-e54d-466e-bac4-6ef1dcfcf4a8
+                stepCounter: b98de696-29b0-454d-8bf2-378ed574a547
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e4a09e59-fc8a-4471-973e-4e1c8671ae71
+          stepCounter: 6c5b5656-91c9-4c15-9c5e-4f36b21bc9f1
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        name: T
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6b0c9119-69ee-413c-94ba-51d84bdf3ca5
+                stepCounter: b98de696-29b0-454d-8bf2-378ed574a547
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          40STG_DAILY_14_TOTAL_SHORT2: b98de696-29b0-454d-8bf2-378ed574a547
+        dependencies:
+          - locationName: TARGET
+            nodeName: 40STG_DAILY_14_TOTAL_SHORT2
+        join:
+          joinCondition: FROM {{ ref('TARGET', '40STG_DAILY_14_TOTAL_SHORT2') }} "40STG_DAILY_14_TOTAL_SHORT2"
+        name: 40STG_DAILY_14_TOTAL_SHORT9
+        noLinkRefs: []
+  name: 40STG_DAILY_14_TOTAL_SHORT9
+  overrideSQL: false
+  schema: ""
+  sqlType: ac8d9047-c17a-4e14-bd54-2ee5d2bcb745
+  type: sql
+  version: 1
+type: Node
